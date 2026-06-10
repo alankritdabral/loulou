@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   keywords: ["LOULOU", "Pan-Asian Restaurant", "Dehradun Dining", "Fine Dining", "Piccolo", "Asian Food Dehradun"],
   authors: [{ name: "LOULOU Restaurant" }],
   icons: {
-    icon: "/loulou/favicon.ico",
-    shortcut: "/loulou/favicon.svg",
-    apple: "/loulou/favicon.svg"
+    icon: "/loulou/images/insta/profile_pic.jpg",
+    shortcut: "/loulou/images/insta/profile_pic.jpg",
+    apple: "/loulou/images/insta/profile_pic.jpg"
   },
   openGraph: {
     title: "LOULOU | Fine Pan-Asian Dining in Dehradun",
