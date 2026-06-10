@@ -13,6 +13,7 @@ interface InstagramData {
     followers: string;
     following: string;
     posts_count: string;
+    profile_pic_url?: string;
   };
   latest_posts: Array<{
     url: string;

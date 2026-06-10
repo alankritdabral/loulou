@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://alankritdabral.github.io"),
   title: {
     default: "LOULOU | Fine Pan-Asian Dining in Dehradun",
     template: "%s | LOULOU"
@@ -11,10 +12,15 @@ export const metadata: Metadata = {
   description: "Experience the exquisite art of Pan-Asian cuisine at LOULOU by Piccolo. Located in Dehradun, we offer a sophisticated atmosphere and authentic Umami flavors.",
   keywords: ["LOULOU", "Pan-Asian Restaurant", "Dehradun Dining", "Fine Dining", "Piccolo", "Asian Food Dehradun"],
   authors: [{ name: "LOULOU Restaurant" }],
+  icons: {
+    icon: "/loulou/favicon.ico",
+    shortcut: "/loulou/favicon.svg",
+    apple: "/loulou/favicon.svg"
+  },
   openGraph: {
     title: "LOULOU | Fine Pan-Asian Dining in Dehradun",
     description: "Authentic Pan-Asian flavors meets vintage European elegance.",
-    url: "https://loulou.in",
+    url: "https://alankritdabral.github.io/loulou",
     siteName: "LOULOU Restaurant",
     images: [
       {
