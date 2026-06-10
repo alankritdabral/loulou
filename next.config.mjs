@@ -4,10 +4,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // If you are deploying to https://<username>.github.io/<repository>/
-  // uncomment the lines below and replace 'repository' with your actual repository name
-  // basePath: '/repository',
-  // assetPrefix: '/repository',
+  // Since your repository is 'loulou', we need to set the base path
+  basePath: '/loulou',
+  assetPrefix: '/loulou',
 };
 
 export default nextConfig;
