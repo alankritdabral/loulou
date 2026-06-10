@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden parallax-bg" style={{ backgroundImage: "url('/images/indoor5.jpg')" }}>
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden parallax-bg" style={{ backgroundImage: "url('/loulou/images/indoor5.jpg')" }}>
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-20 text-center px-4 max-w-5xl">
         <motion.div

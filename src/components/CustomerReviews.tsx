@@ -135,7 +135,7 @@ const CustomerReviews = () => {
                       className="w-12 h-12 rounded-full mr-4 object-cover border-2 border-accent/20" 
                       referrerPolicy="no-referrer"
                       onError={(e) => {
-                        (e.target as HTMLImageElement).src = "/images/user-placeholder.svg";
+                        (e.target as HTMLImageElement).src = "/loulou/images/user-placeholder.svg";
                       }}
                     />
                     <div className="flex flex-col">

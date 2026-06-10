@@ -28,12 +28,12 @@ const InstagramFeed = () => {
   const [selectedPost, setSelectedPost] = useState<any>(null);
   
   useEffect(() => {
-    fetch('/insta-data/insta.json')
+    fetch('/loulou/insta-data/insta.json')
       .then(res => res.json())
       .then(data => {
         const updatedPosts = data.latest_posts.map((post: any, index: number) => ({
           ...post,
-          local_image: post.display_url || `/images/insta/post_${index + 1}_${post.shortcode}.jpg`
+          local_image: post.display_url || `/loulou/images/insta/post_${index + 1}_${post.shortcode}.jpg`
         }));
         setInstaData({ ...data, latest_posts: updatedPosts });
       })
@@ -47,7 +47,7 @@ const InstagramFeed = () => {
     followers: instaData?.profile?.followers || "2,866",
     following: instaData?.profile?.following || "3",
     bio: instaData?.profile?.biography || "Khasra no 355/2, rajpur road near sai mandir kishanpur, Dehra Dun, India 248009",
-    profile_pic: "/images/insta/profile_pic.jpg"
+    profile_pic: "/loulou/images/insta/profile_pic.jpg"
   };
 
   const displayPosts = (instaData?.latest_posts || []).slice(0, 6);

@@ -10,9 +10,9 @@ interface TeamMember {
 
 const Team = () => {
   const members: TeamMember[] = [
-    { name: 'Gaurav Negi', role: 'Founder & Visionary', image: '/images/user-placeholder.svg' },
-    { name: 'Aarti Negi', role: 'Co-Founder', image: '/images/user-placeholder.svg' },
-    { name: 'Mr. Taj', role: 'Restaurant Manager', image: '/images/user-placeholder.svg' },
+    { name: 'Gaurav Negi', role: 'Founder & Visionary', image: '/loulou/images/user-placeholder.svg' },
+    { name: 'Aarti Negi', role: 'Co-Founder', image: '/loulou/images/user-placeholder.svg' },
+    { name: 'Mr. Taj', role: 'Restaurant Manager', image: '/loulou/images/user-placeholder.svg' },
   ];
 
   return (

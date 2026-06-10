@@ -10,9 +10,9 @@ interface SpecialItem {
 
 const Specials = () => {
   const items: SpecialItem[] = [
-    { name: 'Crystal Mushroom Dumpling', image: '/images/dumpling2.jpg', price: '₹620' },
-    { name: 'Steamed Fish with Sticky Rice', image: '/images/dish.jpg', price: '₹1,050' },
-    { name: 'Korean Mushroom Bao', image: '/images/momo.jpg', price: '₹580' },
+    { name: 'Crystal Mushroom Dumpling', image: '/loulou/images/dumpling2.jpg', price: '₹620' },
+    { name: 'Steamed Fish with Sticky Rice', image: '/loulou/images/dish.jpg', price: '₹1,050' },
+    { name: 'Korean Mushroom Bao', image: '/loulou/images/momo.jpg', price: '₹580' },
   ];
 
   return (

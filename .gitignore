@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
 # Next.js
 .next/
 out/

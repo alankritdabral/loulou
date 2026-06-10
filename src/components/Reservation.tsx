@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Reservation = () => {
   return (
     <section id="reservations" className="min-h-screen flex items-center relative overflow-hidden bg-secondary/30 py-12 md:py-0">
-      <div className="absolute inset-0 opacity-10 grayscale parallax-bg" style={{ backgroundImage: "url('/images/indoor2.jpg')" }} />
+      <div className="absolute inset-0 opacity-10 grayscale parallax-bg" style={{ backgroundImage: "url('/loulou/images/indoor2.jpg')" }} />
       <div className="max-w-4xl mx-auto px-4 relative z-10 w-full">
         <motion.div 
           initial={{ opacity: 0, y: 50 }}

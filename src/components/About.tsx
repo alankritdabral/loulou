@@ -16,7 +16,7 @@ const About = () => {
           >
             <div className="gold-frame aspect-[16/9] lg:aspect-[4/3] overflow-hidden shadow-2xl">
               <img 
-                src="/images/restaurant.jpg" 
+                src="/loulou/images/restaurant.jpg" 
                 alt="Restaurant Ambiance" 
                 className="w-full h-full object-cover relative z-10 transition-transform duration-1000 hover:scale-105"
               />
@@ -50,7 +50,7 @@ const About = () => {
             </div>
             <div className="mt-6 flex items-center gap-4">
               <div className="w-16 h-12 flex items-center justify-center">
-                <img src="/images/user-placeholder.svg" alt="Founder Photo" className="w-full h-full object-contain opacity-70 grayscale" />
+                <img src="/loulou/images/user-placeholder.svg" alt="Founder Photo" className="w-full h-full object-contain opacity-70 grayscale" />
               </div>
               <div>
                 <p className="font-bold text-base text-black leading-tight">Gaurav Negi</p>

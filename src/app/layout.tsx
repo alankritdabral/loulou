@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "LOULOU Restaurant",
     images: [
       {
-        url: "/images/restaurant.jpg",
+        url: "/loulou/images/restaurant.jpg",
         width: 1200,
         height: 630,
         alt: "LOULOU Restaurant Ambiance",

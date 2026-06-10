@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 
 const Gallery = () => {
   const images = [
-    '/images/sushi.jpg',
-    '/images/dumpling3.jpg',
-    '/images/drink.jpg',
-    '/images/dumpling1.jpg',
-    '/images/tea.jpg',
-    '/images/egg_rice_soup.jpg',
+    '/loulou/images/sushi.jpg',
+    '/loulou/images/dumpling3.jpg',
+    '/loulou/images/drink.jpg',
+    '/loulou/images/dumpling1.jpg',
+    '/loulou/images/tea.jpg',
+    '/loulou/images/egg_rice_soup.jpg',
   ];
 
   return (
