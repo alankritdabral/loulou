@@ -31,10 +31,19 @@ const InstagramFeed = () => {
     fetch('/loulou/insta-data/insta.json')
       .then(res => res.json())
       .then(data => {
-        const updatedPosts = data.latest_posts.map((post: any, index: number) => ({
-          ...post,
-          local_image: post.display_url || `/loulou/images/insta/post_${index + 1}_${post.shortcode}.jpg`
-        }));
+        const updatedPosts = data.latest_posts.map((post: any, index: number) => {
+          let localPath = post.display_url || `/images/insta/post_${index + 1}_${post.shortcode}.jpg`;
+          
+          // Prefix with /loulou if it's a relative path
+          if (localPath.startsWith('/images/')) {
+            localPath = `/loulou${localPath}`;
+          }
+          
+          return {
+            ...post,
+            local_image: localPath
+          };
+        });
         setInstaData({ ...data, latest_posts: updatedPosts });
       })
       .catch(err => console.error("Could not load Instagram data:", err));
@@ -47,7 +56,9 @@ const InstagramFeed = () => {
     followers: instaData?.profile?.followers || "2,866",
     following: instaData?.profile?.following || "3",
     bio: instaData?.profile?.biography || "Khasra no 355/2, rajpur road near sai mandir kishanpur, Dehra Dun, India 248009",
-    profile_pic: "/loulou/images/insta/profile_pic.jpg"
+    profile_pic: instaData?.profile?.profile_pic_url && instaData.profile.profile_pic_url.startsWith('/images/') 
+      ? `/loulou${instaData.profile.profile_pic_url}` 
+      : "/loulou/images/insta/profile_pic.jpg"
   };
 
   const displayPosts = (instaData?.latest_posts || []).slice(0, 6);
@@ -127,9 +138,18 @@ const InstagramFeed = () => {
               onClick={() => setSelectedPost(post)}
             >
               <img 
-                src={post.local_image || post.display_url} 
+                src={post.local_image} 
                 alt="Instagram post" 
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                onError={(e) => {
+                  // Fallback to external URL if local one fails
+                  if (post.url) {
+                     // We can't easily get the direct image URL from the post URL without a proxy,
+                     // so we just show the placeholder or keep the broken image for now, 
+                     // but at least we try to fix the src.
+                     (e.target as HTMLImageElement).src = "/loulou/images/user-placeholder.svg";
+                  }
+                }}
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center text-white">
                 <InstagramIcon size={20} className="opacity-70" />
@@ -175,9 +195,12 @@ const InstagramFeed = () => {
               {/* Image side */}
               <div className="md:w-3/5 bg-[#050505] flex items-center justify-center relative group">
                 <img 
-                  src={selectedPost.local_image || selectedPost.display_url} 
+                  src={selectedPost.local_image} 
                   alt="Full post" 
                   className="max-w-full max-h-full object-contain" 
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = "/loulou/images/user-placeholder.svg";
+                  }}
                 />
               </div>
 
